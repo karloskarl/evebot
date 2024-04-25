@@ -208,7 +208,8 @@ async def update_status_message():
             try:
                 playercount = get_active_playercount()
                 playerlist = get_active_playerlist()
-                await message.edit(content=f" ")
+                tps = "not yet"
+                await message.edit(content=f"server: online ({tps}) | players online: {playercount} {playerlist}")
             except:
                 await message.edit(content="Server Offline!")
         print("Status message updated!")
